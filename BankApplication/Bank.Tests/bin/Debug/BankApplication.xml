@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankApplication</name>
+    </assembly>
+    <members>
+        <member name="T:BankApplication.BankAccount">
+            <summary>
+            The <c>BankAccount</c> class.
+            This contains methods to get account number, find account,deposit, withdraw, transfer, 
+            get balance and interest rate
+            </summary>
+        </member>
+        <member name="M:BankApplication.BankAccount.#ctor">
+            <summary>
+            The <c>BankAccount</c> constructor.
+            This generates the account number for each new account created.
+            </summary>
+            <returns>The Account Number</returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.GetAcctNo">
+            <summary>
+            The <c>GetAcctNo</c> method.
+            This generates the account number for each new account created.
+            </summary>
+            <returns>The Account Number</returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.FindAccountReal(BankApplication.BankAccount)">
+            <summary>
+            The <c>FindAccountReal</c> method.
+            This finds the account.
+            </summary>
+            <param name="bA">A BankAccount</param>
+            <returns>The Account </returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.FindAccount(System.String)">
+            <summary>
+            The <c>FindAccount</c> method.
+            This finds the account given the account number.
+            </summary>
+            <param name="acctNo">An account number</param>
+            <returns>The Account </returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.Deposit(System.String,System.String,System.Double)">
+            <summary>
+            The <c>Deposit</c> method.
+            This makes a deposit of the specified amount into the specified account.
+            </summary>
+            <param name="acctNo">An account number</param>
+            <param name="depositor">Name of depositor</param>
+            <param name="amount">Amount to be deposited</param>
+            <returns>A double value
+            <list type="bullet">
+            <item>If the account does not exist --> returns -2 </item>
+            <item>If deposit is successful --> returns account balance</item>
+            </list>
+             </returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.Withdraw(System.String,System.Double)">
+            <summary>
+            The <c>Withdraw</c> method.
+            This makes a withdraw of the specified amount.
+            </summary>
+            <param name="pin">The pin for the account</param>
+            <param name="amount">Amount to be withdrawn</param>
+            <returns>A double value
+            <list type="bullet">
+            <item>If the pin is incorrect --> returns -1 </item>
+            <item>If there is insufficient funds in the account --> 0</item>
+            <item>If withdraw is successful --> returns account balance</item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.Transfer(System.String,System.String,System.Double)">
+            <summary>
+            The <c>Transfer</c> method.
+            This makes a transfer of the specified amount to the specified account.
+            </summary>
+            <param name="pin">The pin for the account</param>
+            <param name="transferAcctNo">The account number that the specified ammount is to be transferred to</param>
+            <param name="amount">Amount to be transferred</param>
+            <returns>A tuple of type double
+            <list type="bullet">
+            <item>If the account does not exist --> returns (-2, -2) </item>
+            <item>If the type of the accounts do not match --> returns (-3, -3) </item>
+            <item>If the pin is incorrect --> returns (-1, -1) </item>
+            <item>If there is insufficient funds in the account --> returns (-0, -0)</item>
+            <item>If transfer is successful --> returns (account balance for account transferred from, 
+            account balance for account transferred to)</item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.GetBalance(System.String)">
+            <summary>
+            The <c>GetBalance</c> method.
+            This gets the account balance.
+            </summary>
+            <param name="pin">The pin for the account</param>
+            <returns>A double value
+            <list type="bullet">
+            <item>If the pin is incorrect --> returns -1</item>
+            <item>If balance check is successful --> returns account balance</item>
+            </list>
+            </returns>
+        </member>
+        <member name="M:BankApplication.BankAccount.InterestRate(System.Double)">
+            <summary>
+            The <c>InterestRate</c> method.
+            </summary>
+            <param name="amount">The amount taken from the account</param>
+            <returns>A double value of 0 </returns>
+        </member>
+        <member name="T:BankApplication.SavingsAccount">
+            <summary>
+            The <c>SavingsAccount</c> class.
+            This class is a derived class of the <c>BankAccount</c> class.
+            This contains method to create account and get interest rate
+            </summary>
+        </member>
+        <member name="M:BankApplication.SavingsAccount.CreateAccount(System.String,System.String,System.Double)">
+            <summary>
+            The <c>CreateAccount</c> method.
+            This finds the account given the account number.
+            </summary>
+            <param name="acctName">The account name</param>
+            <param name="acctPin">The account pin</param>
+            <param name="acctBalance">Optional starting balance</param>
+            <returns>A Savings Account</returns>
+        </member>
+        <member name="M:BankApplication.SavingsAccount.InterestRate(System.Double)">
+            <summary>
+            The <c>InterestRate</c> method.
+            This calculates the amount to be deducted from the account balance when more than 
+            150,000 is to be taken from the account
+            </summary>
+            <param name="amount">Amount to be taken from account</param>
+            <returns>A double value of new amount to be deducted</returns>
+        </member>
+        <member name="T:BankApplication.CurrentAccount">
+            <summary>
+            The <c>CurrentAccount</c> class.
+            This class is a derived class of the <c>BankAccount</c> class.
+            This contains method to create account and get interest rate
+            </summary>
+        </member>
+        <member name="M:BankApplication.CurrentAccount.CreateAccount(System.String,System.String,System.Double)">
+            <summary>
+            The <c>CreateAccount</c> method.
+            This finds the account given the account number.
+            </summary>
+            <param name="acctName">The account name</param>
+            <param name="acctPin">The account pin</param>
+            <param name="acctBalance">Optional starting balance</param>
+            <returns>A Current Account</returns>
+        </member>
+        <member name="M:BankApplication.CurrentAccount.InterestRate(System.Double)">
+            <summary>
+            The <c>InterestRate</c> method.
+            This calculates the amount to be deducted from the account balance when more than 
+            150,000 is to be taken from the account
+            </summary>
+            <param name="amount">Amount to be taken from account</param>
+            <returns>A double value of new amount to be deducted</returns>
+        </member>
+    </members>
+</doc>

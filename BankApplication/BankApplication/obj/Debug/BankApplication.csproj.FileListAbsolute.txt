@@ -1,0 +1,7 @@
+c:\users\hp user\documents\visual studio 2015\Projects\BankApplication\BankApplication\bin\Debug\BankApplication.exe.config
+C:\Users\Hp User\Documents\Visual Studio 2015\Projects\BankApplication\BankApplication\obj\Debug\BankApplication.csprojResolveAssemblyReference.cache
+C:\Users\Hp User\Documents\Visual Studio 2015\Projects\BankApplication\BankApplication\bin\Debug\BankApplication.exe
+C:\Users\Hp User\Documents\Visual Studio 2015\Projects\BankApplication\BankApplication\bin\Debug\BankApplication.pdb
+C:\Users\Hp User\Documents\Visual Studio 2015\Projects\BankApplication\BankApplication\obj\Debug\BankApplication.exe
+C:\Users\Hp User\Documents\Visual Studio 2015\Projects\BankApplication\BankApplication\obj\Debug\BankApplication.pdb
+C:\Users\Hp User\Documents\Visual Studio 2015\Projects\BankApplication\BankApplication\bin\Debug\BankApplication.XML
